@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 560" width="100%" height="100%">
+  <rect width="920" height="560" fill="rgb(15, 23, 42)" rx="8"/>
+  <rect width="920" height="38" fill="rgb(30, 41, 59)" rx="8"/>
+  <circle cx="20" cy="19" r="6" fill="rgb(239, 68, 68)"/>
+  <circle cx="38" cy="19" r="6" fill="rgb(245, 158, 11)"/>
+  <circle cx="56" cy="19" r="6" fill="rgb(34, 197, 94)"/>
+  <text x="310" y="24" fill="rgb(148, 163, 184)" font-family="Segoe UI, -apple-system, sans-serif" font-size="12">Terminal: devops@ubuntu-devops-server — UFW Firewall</text>
+
+  <g font-family="Courier New, Consolas, monospace" font-size="13">
+    <!-- Command 1: Deny incoming -->
+    <text x="24" y="65" fill="rgb(34, 197, 94)">devops@ubuntu-devops-server</text>
+    <text x="240" y="65" fill="rgb(248, 250, 252)">:~$ </text>
+    <text x="275" y="65" fill="rgb(56, 189, 248)">sudo ufw default deny incoming</text>
+    <text x="24" y="87" fill="rgb(203, 213, 225)">Default incoming policy changed to 'deny'</text>
+    <text x="24" y="105" fill="rgb(148, 163, 184)">(be sure to update your rules accordingly)</text>
+
+    <!-- Command 2: Allow outgoing -->
+    <text x="24" y="132" fill="rgb(34, 197, 94)">devops@ubuntu-devops-server</text>
+    <text x="240" y="132" fill="rgb(248, 250, 252)">:~$ </text>
+    <text x="275" y="132" fill="rgb(56, 189, 248)">sudo ufw default allow outgoing</text>
+    <text x="24" y="154" fill="rgb(203, 213, 225)">Default outgoing policy changed to 'allow'</text>
+
+    <!-- Command 3: Allow ports -->
+    <text x="24" y="181" fill="rgb(34, 197, 94)">devops@ubuntu-devops-server</text>
+    <text x="240" y="181" fill="rgb(248, 250, 252)">:~$ </text>
+    <text x="275" y="181" fill="rgb(56, 189, 248)">sudo ufw allow 22/tcp &amp;&amp; sudo ufw allow 80/tcp</text>
+    <text x="24" y="203" fill="rgb(203, 213, 225)">Rules updated</text>
+    <text x="24" y="221" fill="rgb(203, 213, 225)">Rules updated (v6)</text>
+
+    <!-- Command 4: Enable -->
+    <text x="24" y="248" fill="rgb(34, 197, 94)">devops@ubuntu-devops-server</text>
+    <text x="240" y="248" fill="rgb(248, 250, 252)">:~$ </text>
+    <text x="275" y="248" fill="rgb(56, 189, 248)">sudo ufw enable</text>
+    <text x="24" y="270" fill="rgb(34, 197, 94)">Firewall is active and enabled on system startup</text>
+
+    <!-- Command 5: Status verbose -->
+    <text x="24" y="302" fill="rgb(34, 197, 94)">devops@ubuntu-devops-server</text>
+    <text x="240" y="302" fill="rgb(248, 250, 252)">:~$ </text>
+    <text x="275" y="302" fill="rgb(56, 189, 248)">sudo ufw status verbose</text>
+
+    <text x="24" y="332" fill="rgb(248, 250, 252)" font-weight="bold">Status: active</text>
+    <text x="24" y="352" fill="rgb(203, 213, 225)">Logging: on (low)</text>
+    <text x="24" y="372" fill="rgb(203, 213, 225)">Default: deny (incoming), allow (outgoing), disabled (routed)</text>
+    <text x="24" y="392" fill="rgb(203, 213, 225)">New profiles: skip</text>
+
+    <text x="24" y="424" fill="rgb(148, 163, 184)" font-weight="bold">To                         Action      From</text>
+    <text x="24" y="442" fill="rgb(148, 163, 184)">--                         ------      ----</text>
+    <text x="24" y="462" fill="rgb(34, 197, 94)">22/tcp                     ALLOW IN    Anywhere</text>
+    <text x="24" y="482" fill="rgb(34, 197, 94)">80/tcp                     ALLOW IN    Anywhere</text>
+    <text x="24" y="502" fill="rgb(34, 197, 94)">22/tcp (v6)                ALLOW IN    Anywhere (v6)</text>
+    <text x="24" y="522" fill="rgb(34, 197, 94)">80/tcp (v6)                ALLOW IN    Anywhere (v6)</text>
+  </g>
+</svg>
